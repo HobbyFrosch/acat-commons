@@ -2,10 +2,12 @@
 
 namespace ACAT\Commons\Validator;
 
+use Attribute;
 use Spatie\DataTransferObject\Validator;
 use Spatie\DataTransferObject\Validation\ValidationResult;
 
-class IsNumber implements Validator {
+#[Attribute(Attribute::TARGET_PROPERTY | Attribute::IS_REPEATABLE)]
+final class IsNumber implements Validator {
 
     /**
      * @var int|null
