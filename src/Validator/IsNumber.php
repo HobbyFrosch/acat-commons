@@ -22,7 +22,7 @@ final class IsNumber implements Validator {
     }
 
     public function validate(mixed $value) : ValidationResult {
-       if (!is_numeric($value) || (!$this->minValue) && $value < $this->minValue) {
+       if (!is_numeric($value) || ($this->minValue) && $value < $this->minValue) {
            return ValidationResult::invalid($value . " . isn't a valid number");
         }
         return ValidationResult::valid();
