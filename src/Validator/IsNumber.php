@@ -12,7 +12,7 @@ final class IsNumber implements Validator {
     /**
      * @var int|null
      */
-    private ?int $minValue = null;
+    private ?int $minValue;
 
     /**
      * @param int|null $minValue
