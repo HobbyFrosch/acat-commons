@@ -14,11 +14,23 @@ use ACAT\Dto\Validation\ValidationResult;
 final class IsValidDate implements Validator {
 
     /**
+     * @var string
+     */
+    private string $format;
+
+    /**
+     * @param string $format
+     */
+    public function __construct(string $format) {
+        $this->format = $format;
+    }
+
+    /**
      * @param mixed $value
      * @return ValidationResult
      */
     public function validate(mixed $value) : ValidationResult {
-        if (empty($value) || !DateTime::createFromFormat('Y-m-d', $value)) {
+        if (empty($value) || empty($this->format)|| !DateTime::createFromFormat($this->format, $value)) {
             return ValidationResult::invalid($value . " . isn't a valid date");
         }
         return ValidationResult::valid();
