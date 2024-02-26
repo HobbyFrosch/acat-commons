@@ -2,8 +2,8 @@
 
 namespace ACAT\Commons\Caster;
 
+use ACAT\Dto\Caster;
 use DateTimeImmutable;
-use Spatie\DataTransferObject\Caster;
 
 /**
  *
@@ -22,4 +22,5 @@ class DateTimeCaster implements Caster {
     public function cast(mixed $value) : DateTimeImmutable {
         return DateTimeImmutable::createFromFormat('Y-m-d H:i:s', $value);
     }
+
 }

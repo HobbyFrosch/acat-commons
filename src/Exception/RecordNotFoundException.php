@@ -15,7 +15,6 @@ class RecordNotFoundException extends BaseException {
      * @param int $code
      * @param Throwable|null $previous
      */
-    #[Pure]
     public function __construct(string $message = "", int $code = 404, ?Throwable $previous = null) {
         parent::__construct($message, $code, $previous);
     }

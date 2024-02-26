@@ -3,8 +3,8 @@
 namespace ACAT\Commons\Validator;
 
 use Attribute;
-use Spatie\DataTransferObject\Validation\ValidationResult;
-use Spatie\DataTransferObject\Validator;
+use ACAT\Dto\Validator;
+use ACAT\Dto\Validation\ValidationResult;
 
 /**
  *

@@ -3,8 +3,8 @@
 namespace ACAT\Commons\Validator;
 
 use Attribute;
-use Spatie\DataTransferObject\Validator;
-use Spatie\DataTransferObject\Validation\ValidationResult;
+use ACAT\Dto\Validator;
+use ACAT\Dto\Validation\ValidationResult;
 
 #[Attribute(Attribute::TARGET_PROPERTY | Attribute::IS_REPEATABLE)]
 final class IsNumber implements Validator {
@@ -21,6 +21,10 @@ final class IsNumber implements Validator {
         $this->minValue = $minValue;
     }
 
+    /**
+     * @param mixed $value
+     * @return ValidationResult
+     */
     public function validate(mixed $value) : ValidationResult {
        if (!is_numeric($value) || ($this->minValue) && $value < $this->minValue) {
            return ValidationResult::invalid($value . " . isn't a valid number");

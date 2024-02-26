@@ -3,7 +3,8 @@
 namespace ACAT\Commons\Caster;
 
 use Exception;
-use Spatie\DataTransferObject\Caster;
+use ACAT\Dto\Caster;
+use ACAT\Commons\Exception\InvalidArgumentException;
 
 /**
  *

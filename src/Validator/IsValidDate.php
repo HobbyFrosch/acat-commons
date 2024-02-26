@@ -4,8 +4,8 @@ namespace ACAT\Commons\Validator;
 
 use DateTime;
 use Attribute;
-use Spatie\DataTransferObject\Validator;
-use Spatie\DataTransferObject\Validation\ValidationResult;
+use ACAT\Dto\Validator;
+use ACAT\Dto\Validation\ValidationResult;
 
 /**
  *

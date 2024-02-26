@@ -3,9 +3,9 @@
 namespace ACAT\Commons\Validator;
 
 use Attribute;
-use Spatie\DataTransferObject\Validation\ValidationResult;
-use Spatie\DataTransferObject\Validator;
+use ACAT\Dto\Validator;
 use Symfony\Component\Uid\Uuid;
+use ACAT\Dto\Validation\ValidationResult;
 
 /**
  *
