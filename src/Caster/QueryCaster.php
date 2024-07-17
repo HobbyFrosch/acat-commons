@@ -22,14 +22,6 @@ class QueryCaster implements Caster {
             return [];
         }
 
-        foreach ($queryValues as $param) {
-            if (!array_key_exists('key', $param) ||
-                !array_key_exists('value', $param) ||
-                empty($param['key'])) {
-                throw new InvalidArgumentException('invalid query');
-            }
-        }
-
         return $queryValues;
 
     }
