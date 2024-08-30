@@ -11,7 +11,7 @@ use ACAT\Dto\Validation\ValidationResult;
  *
  */
 #[Attribute(Attribute::TARGET_PROPERTY | Attribute::IS_REPEATABLE)]
-final class IsValidDate implements Validator {
+final class IsValidDateTime implements Validator {
 
     /**
      * @var string
